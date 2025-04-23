@@ -1,61 +1,98 @@
-/* header{
-    font-size: 50px;    
-    display: flex;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-section h2{
-    text-align: center;
-    font-size: 30px;
-}
-section ul li{
-    font-size: 40px;
-}
-footer{
-    text-align: center;
-    font-size: 50px;
 
-} */
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f5;
     color: #333;
-    text-align: center;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    margin-top: 10px;
+    background-color: #ffb6c1;
+    padding: 16px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-    
-nav li {
-    display: inline;
-    margin: 0 15px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    }
+    color: #000000;
+    font-weight: bold;
+    font-size: 17.6px;
+    transition: color 0.3s ease;
+}
 
 nav a:hover {
-    text-decoration: underline;
+    color: #492323ad;
+}
+
+#hero {
+    text-align: center;
+    color: white;
+    padding: 80px 32px;
+    background-color: #ffa6c9;
+}
+
+#hero h1 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+#hero p {
+    font-size: 19.2px;
+}
+
+section {
+    padding: 48px 32px;
+    text-align: center;
+}
+
+#servicos img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    margin: 16px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#servicos a {
+    display: inline-block;
+    margin-top: 16px;
+    background-color: #ff69b4;
+    color: white;
+    padding: 11.2px 19.2px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#servicos a:hover {
+    background-color: #e754a1;
+}
+
+footer {
+    background-color: #ffb6c1;
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+    margin-top: 32px;
+}
+
+footer .whatsapp-button {
+    display: inline-block;
+    margin-top: 16px;
+    background-color: #25D366;
 }

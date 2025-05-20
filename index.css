@@ -14,25 +14,60 @@ body {
 header {
     background-color: #ffcad4;
     padding: 15px 0;
+    position: relative;
+    z-index: 100;
 }
 
-nav ul {
+nav {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    z-index: 999;
+}
+
+.hamburger {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+nav ul.nav-list {
     display: flex;
     justify-content: center;
     list-style: none;
+    transition: max-height 0.3s ease;
 }
 
-nav ul li {
+nav ul.nav-list li {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav ul.nav-list li a {
     text-decoration: none;
     color: #222;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul.nav-list li a:hover {
     color: #d6336c;
 }
 
@@ -55,6 +90,8 @@ section {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
 }
 
 #servicos a {
@@ -85,6 +122,12 @@ section {
     background-color: #fff;
 }
 
+#localizacao {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
 footer {
     background-color: #ffcad4;
     text-align: center;
@@ -104,12 +147,6 @@ footer {
 
 .whatsapp-button:hover {
     background-color: #1ebc57;
-}
-
-#localizacao {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
 }
 
 .whatsapp-float {
@@ -137,4 +174,86 @@ footer {
 .whatsapp-float img {
     width: 35px;
     height: 35px;
+}
+
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#galeria img {
+    flex: 1 1 200px;
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul.nav-list {
+        flex-direction: column;
+        background-color: #ffcad4;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    #menu-toggle:checked ~ .menu-icon .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menu-toggle:checked ~ .menu-icon .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .menu-icon .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    #menu-toggle:checked ~ .nav-list {
+        max-height: 500px;
+        padding: 10px 0;
+    }
+
+    nav ul.nav-list li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .whatsapp-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    #hero h1 {
+        font-size: 1.7em;
+    }
 }

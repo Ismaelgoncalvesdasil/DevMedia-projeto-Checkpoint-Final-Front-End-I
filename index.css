@@ -94,9 +94,17 @@ section {
     height: auto;
 }
 
+#galeria h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+
 #servicos a {
     display: inline-block;
-    margin-top: 16px;
+    margin: 32px auto 0;
     background-color: #ff69b4;
     color: white;
     padding: 11.2px 19.2px;
@@ -176,17 +184,14 @@ footer {
     height: 35px;
 }
 
-
-#galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
 #galeria img {
-    flex: 1 1 200px;
-    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    border-radius: 10px;
+}
+#galeria .img2{
+    width: 460px;
 }
 
 @media (max-width: 768px) {
